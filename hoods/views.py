@@ -47,9 +47,9 @@ class LeaveHood(LoginRequiredMixin, generic.RedirectView):
         try:
             membership = HoodMember.objects.filter(user=self.request.user, hood__slug=self.kwargs.get('slug')).get()
         except HoodMember.DoesNotExist:
-            messages.warning(self.request, 'Sorry your are not a resident here!')
+            messages.warning(self.request, 'Sorry your are not a member here!')
         else:
             membership.delete()
-            messages.success(self.request, 'You are no longer a resident!')
+            messages.success(self.request, 'You are no longer a member!')
 
         return super().get(request, *args, **kwargs)
