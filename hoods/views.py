@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.urlresolvers import reverse
 from django.views import generic
-from hoods.models import Hood
+from hoods.models import Hood, HoodMember
 
 # Create your views here.
 
