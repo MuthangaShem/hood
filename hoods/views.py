@@ -36,3 +36,20 @@ class JoinHood(LoginRequiredMixin, generic.RedirectView):
             messages.success(self.request, 'Congratulatoins!! You are now a member!')
 
         return super().get(request, *args, **kwargs)
+
+
+class LeaveHood(LoginRequiredMixin, generic.RedirectView):
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('hoods:single', kwargs={'slug': self.kwargs.get('slug')})
+
+    def get(self, request, *args, **kwargs):
+
+        try:
+            membership = HoodMember.objects.filter(user=self.request.user, hood__slug=self.kwargs.get('slug')).get()
+        except HoodMember.DoesNotExist:
+            messages.warning(self.request, 'Sorry your are not a resident here!')
+        else:
+            membership.delete()
+            messages.success(self.request, 'You are no longer a resident!')
+
+        return super().get(request, *args, **kwargs)

@@ -38,3 +38,5 @@ class HoodMember(models.Model):
 
     class Meta:
         unique_together = ('hood', 'user')
+
+
