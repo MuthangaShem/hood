@@ -6,5 +6,6 @@ app_name = 'posts'
 urlpatterns = [
     url(r'^$', views.BusinessList.as_view(), name='all'),
     url(r'new/$', views.CreateBusiness.as_view(), name='create'),
+    url(r'by/(?P<username>[-\w]+)', views.UserBusinesses.as_view(), name='for_user'),
 
 ]
