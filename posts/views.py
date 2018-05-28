@@ -18,3 +18,12 @@ class CreateBusiness(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView)
         self.object.user = self.request.user
         self.object.save()
         return super().form_valid(form)
+
+class BusinessDetail(SelectRelatedMixin, generic.DetailView):
+    model = models.Business
+    select_related = ('user', 'hood')
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user___username__iexact=self.kwargs.get('username'))
+
