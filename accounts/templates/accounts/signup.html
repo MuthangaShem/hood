@@ -9,7 +9,7 @@
         <h5 class="card-header text-center">Sign Up</h5>
         <div class="card-body">
           <form method="POST">
-            {% csrf_token %} {% bootstrap_form form %}
+            {% csrf_token %} {% bootstrap_form form layout='inline' %}
             <input type="submit" class="btn btn-success" value="Sign Up">
           </form>
         </div>

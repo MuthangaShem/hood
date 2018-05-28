@@ -2,8 +2,8 @@
 {% block prehood %}
 <div class="card mt-3" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{hood.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Occupant Count: {{hood.occupants.count}}</h6>
+    <h5 class="card-title">{{hood.name}} Hood</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Members: {{hood.occupants.count}}</h6>
     {% if user in hood.occupants.all %}
     <a href="{% url 'hoods:leave' slug=hood.slug %}" class="card-link"> <i class="fa fa-sign-out"></i> Leave</a>
     {% else %}
