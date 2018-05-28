@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 
 # Create your models here.
 User = get_user_model()
-reigster = template.Library
+register = template.Library
 
 class Hood(models.Model):
     name = models.CharField(max_length=140, unique=True)
