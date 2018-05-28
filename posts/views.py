@@ -9,6 +9,14 @@ from . import models
 from . import forms
 from django.contrib.auth import get_user_model
 
+# Create your views here.
+User = get_user_model()
+
+
+class BusinessList(SelectRelatedMixin, generic.ListView):
+    model = models.Business
+    select_related = ('user', 'hood')
+
 class UserBusinesses(generic.ListView):
     model = models.Business
     template_name = 'posts/user_post_list.html'
