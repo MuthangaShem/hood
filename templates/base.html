@@ -7,11 +7,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://i.imgur.com/PbCNmPB.png" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Linda Hood</title>
 </head>
 
-<body style="background: url(https://images.unsplash.com/photo-1499310392581-322cec0355a6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=195675111b0e52404509f50a6adde11d); background-position: center;background-repeat: no-repeat;   background-size: cover;">
+<body style="background: url(https://images.unsplash.com/photo-1499310392581-322cec0355a6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=195675111b0e52404509f50a6adde11d); background-position: center;background-repeat: no-repeat;   background-size: cover;
+  ">
 <!--   <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'home' %}">
@@ -35,7 +37,7 @@
     </div>
     {% if user.is_authenticated %}
       <a href="{% url 'accounts:logout' %}">
-        <button style="margin-right: 50px" class="btn btn-danger" id="navbarNavDropdown">Logout</button> 
+        <button style="margin-right: 50px" class="btn btn-danger btn-sm" id="navbarNavDropdown">Logout</button> 
       </a>
     {% endif %}
   </nav>
