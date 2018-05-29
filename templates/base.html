@@ -12,16 +12,17 @@
 </head>
 
 <body>
-  <nav class="navbar  navbar-expand-lg navbar-dark bg-light fixed-top">
+  <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'home' %}">
       <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
       Linda Hood
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    
+    {% if user.is_authenticated %}
+      <a href="{% url 'accounts:logout' %}">
+        <button style="margin-right: 50px" class="btn btn-danger" id="navbarNavDropdown">Logout</button> 
+      </a>
+    {% endif %}
     </div> 
   </nav>
   {% block content %} {% endblock %}
