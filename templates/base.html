@@ -18,17 +18,17 @@
       <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
       Linda Hood
     </a>
-    {% if user.is_authenticated %}
+    {% if user.is_authenticated %}<a href="https://imgur.com/PbCNmPB"><img src="https://i.imgur.com/PbCNmPB.png" title="source: imgur.com" /></a>
       <a href="{% url 'accounts:logout' %}">
         <button style="margin-right: 50px" class="btn btn-danger" id="navbarNavDropdown">Logout</button> 
       </a>
     {% endif %}
     </div> 
   </nav>
- -->  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+ -->  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" style="height: 60px">
     <div class="navbar-header" style=" float: left;padding: 15px; text-align: center;width: 100%;">
       <a class="navbar-brand" href="{% url 'home' %}" style="float:none;">
-        <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="https://i.imgur.com/PbCNmPB.png" width="30" height="30" class="d-inline-block align-top" alt="">
         Linda Hood
       </a>
     </div>
