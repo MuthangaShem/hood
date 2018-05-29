@@ -1,12 +1,12 @@
 {% extends "hoods/hood_base.html" %} {% load bootstrap4 %} 
 {% block hood_content %}
-<div class="container mt-5 mb-3">
-  <div class="row">
-    <div class="col-md-1">
+<div class="container ">
+  <div class="row" >
+    <div class="col-md-4">
 
     </div>
     <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style=" margin-top: 22%">
         <h5 class="card-header text-center">Create New Hood</h5>
         <div class="card-body">
           <form action="{% url 'hoods:create'%}" method="post">
@@ -16,7 +16,8 @@
         </div>
       </div>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-4">
     </div>
   </div>
+</div>
   {% endblock %}

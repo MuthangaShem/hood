@@ -1,5 +1,5 @@
 {% extends "hoods/hood_base.html" %} {% block prehood %}
-<div class="row mt-2">
+<div class="row mt-2" ">
   <div class="col-md-4">
     {% if user.is_authenticated %}
     <p>Welcome 
@@ -8,11 +8,10 @@
     <a href="{% url 'hoods:create' %}">Create Hood</a> {% endif %}
   </div>
   {% endblock %} {% block hood_content %}
-  <div class="col-md-8">
     <div class="row">
       {% for hood in object_list %}
       <div class="col-md-4">
-        <div class="card mt-2">
+        <div class="card mt-2 text-white bg-dark mb-3" >
           <div class="card-body">
             <h5 class="card-title"><a href="{% url 'hoods:single' slug=hood.slug %}">{{hood.name}}</a></h5>
             <h6 class="card-subtitle mb-2 text-muted">{{hood.location}}</h6>
