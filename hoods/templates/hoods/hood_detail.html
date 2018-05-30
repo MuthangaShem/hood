@@ -20,16 +20,18 @@
 {% endblock %}
 {% block hood_content %}
 <div class="mt-3 ml-3">
+  <div class="card">
   {% if hood.businesses.count == 0 %}
   <h4>No Businesses in this hood yet!</h4>
   {% if user in hood.occupants.all %}
-  <a href="{% url 'posts:create' %}"><button class="btn btn-tertiary" style="">Create Business</button> </a>
+  <a href="{% url 'posts:create' %}"><button class="btn btn-primary" style="">Create Business</button> </a>
   {% endif %}
   {% else %}
     {% for business in hood.businesses.all %}
      {% include "posts/_post.html" %}
     {% endfor %}
   {% endif%}
+</div>
 </div>
 
 {% endblock %}
