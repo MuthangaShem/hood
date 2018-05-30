@@ -4,7 +4,7 @@
 
     <div class="card-body">
       <p>Business Email : {{business.business_email}}</p>
-      <p><strong>Owner : {{business.user.username}}</strong></p>
+      <p><strong>Proprietor : {{business.user.username}}</strong></p>
       <a href="{% url 'posts:for_user' username=business.user.username %}"></a>
       <time><a href="{% url 'posts:single' username=business.user.username pk=business.pk %}"></a></time>
     </div>

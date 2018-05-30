@@ -1,13 +1,15 @@
 {% extends "posts/post_base.html" %}
 {% block post_content %}
-<h4>Are you sure you want to Delete this business?</h4>
+<div class="card" style="margin-top: 6%">
 <div class="posts">
+<h4>Are you sure you want to Delete this business?</h4>
   {% include "posts/_post.html" with business=object hide_delete=True %}
   <form method="post">
     {% csrf_token %}
-    <input type="submit" value="Confirm Delete" class="btn btn-warning">
-    <a href="{% url 'posts:single' username=user.username pk=object.pk %}">Cancel</a>
+<!--     <input type="submit" value="Confirm Delete" class="btn btn-warning">
+ -->    <a class="btn btn-primary" href="{% url 'posts:single' username=user.username pk=object.pk %}">Cancel</a>
   </form>
+</div>
 
 </div>
 
